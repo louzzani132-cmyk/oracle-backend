@@ -5,7 +5,7 @@ const fetch = (...args) => import("node-fetch").then(({ default: f }) => f(...ar
 const cron = require("node-cron");
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 // ── BASE DE DONNÉES ──────────────────────────────────────────
